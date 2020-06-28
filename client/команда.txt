@@ -1,0 +1,1 @@
+djoin /requestODJ /loadfile c:\test\wks1.txt /windowspath %systemroot% /localos
