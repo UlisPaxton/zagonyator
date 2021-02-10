@@ -5,13 +5,7 @@ import requests
 
 
 dc = input("DC ip?: ")
-
-
-
 domain = input("domain?: ")
-
-
-	
 computername = input("computername?: ")
 
 print("Ок, поехали")
@@ -22,12 +16,7 @@ if not os.path.exists(r"C:\temp"):
 
 url = f"http://{dc}/invite?computername={computername}&domain={domain}"
 r = requests.get(url)
-print(r)
 invite_bin = r.content
 invite_file = "C:\\temp\\temp.invite"
 with open(invite_file, "wb") as f:
     f.write(invite_bin)
-#cmd = f"djoin /requestODJ /loadfile {invite_file} /windowspath %systemroot% /localos".split()
-#call(cmd)
-
-
